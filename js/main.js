@@ -17,7 +17,7 @@
   });
 
 
-	var fullHeight = function() {
+	const fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function(){
@@ -28,7 +28,7 @@
 	fullHeight();
 
 	// loader
-	var loader = function() {
+	const loader = function() {
 		setTimeout(function() { 
 			if($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
@@ -43,7 +43,7 @@
 
 
    // Burger Menu
-	var burgerMenu = function() {
+	const burgerMenu = function() {
 
 		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
 
@@ -63,13 +63,13 @@
 	burgerMenu();
 
 
-	var onePageClick = function() {
+	const onePageClick = function() {
 
 
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
 	    event.preventDefault();
 
-	    var href = $.attr(this, 'href');
+	    const href = $.attr(this, 'href');
 
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
@@ -83,7 +83,7 @@
 	onePageClick();
 	
 
-	var carousel = function() {
+	const carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
@@ -110,7 +110,7 @@
 	carousel();
 
 	$('nav .dropdown').hover(function(){
-		var $this = $(this);
+		const $this = $(this);
 		// 	 timer;
 		// clearTimeout(timer);
 		$this.addClass('show');
@@ -118,7 +118,7 @@
 		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
 		$this.find('.dropdown-menu').addClass('show');
 	}, function(){
-		var $this = $(this);
+		const $this = $(this);
 			// timer;
 		// timer = setTimeout(function(){
 			$this.removeClass('show');
@@ -134,7 +134,7 @@
 	});
 
 	// scroll
-	var scrollWindow = function() {
+	const scrollWindow = function() {
 		$(window).scroll(function(){
 			var $w = $(this),
 					st = $w.scrollTop(),
@@ -175,7 +175,7 @@
 
 	
 
-	var counter = function() {
+	const counter = function() {
 		
 		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
 
@@ -202,8 +202,8 @@
 	counter();
 
 
-	var contentWayPoint = function() {
-		var i = 0;
+	const contentWayPoint = function() {
+		let i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
